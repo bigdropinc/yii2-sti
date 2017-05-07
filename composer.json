@@ -1,0 +1,21 @@
+{
+    "name": "bigdropinc/yii2-sti",
+    "description": "This extension provides realization of single table inheritance",
+    "type": "yii2-extension",
+    "keywords": ["yii2","sti","single","table","inheritance"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Vadim Trunov",
+            "email": "vadim.tr@bigdropinc.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "bigdropinc\\sti\\": ""
+        }
+    }
+}
