@@ -10,7 +10,6 @@
 namespace bigdropinc\sti;
 
 
-use common\db\ActiveQuery;
 use Yii;
 use yii\base\Exception;
 use yii\helpers\StringHelper;
