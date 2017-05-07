@@ -32,7 +32,7 @@ You can implement STI into your models by following with two steps:
 
 More detailed usage can be found below.
 
-###Create a migration
+### Create a migration
 
 Firstly to implement STI into database you should have STI column in database table. 
 By default it named **type**, but you can choose whatever you want. 
@@ -52,7 +52,7 @@ Your migration will looks like code below.
     }
 ```
 
-###Active Record
+### Active Record
 
 Model witch should implement STI should extends from ```bigdropinc\sti\ActiveRecord```. 
 The better way is to create an base ActiveRecord class for whole your project and extend all models from it.
@@ -113,7 +113,7 @@ If you need to use your own ActiveQuery class with some logic with STI you shoul
   * Extend your ActiveQuery class from ```bigdropinc\sti\ActiveQuery```
   * Override ```protected static function getActiveQuery()``` in model you need and return your ActiveQuery class name
 
-###Becomes
+### Becomes
 
 You can convert any model according STI scheme as in example below.
  
