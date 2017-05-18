@@ -200,7 +200,7 @@ class ActiveRecord extends \yii\db\ActiveRecord
         $parentClass = get_parent_class($class);
 
         $className = self::getShortClassName($class);
-        $parentClassName = self::getShortClassName(get_parent_class($parentClass));
+        $parentClassName = self::getShortClassName($parentClass);
         if ($className == $parentClassName) {
             return static::isBaseClass($parentClass);
         } elseif ($parentClassName == 'ActiveRecord') {
