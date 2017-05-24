@@ -83,6 +83,21 @@ class ActiveRecord extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+    public static function deleteAll($condition = '', $params = [])
+    {
+        if(static::isStiEnabled()){
+            $condition = [
+                'AND',
+                ['IN', static::getStiColumn(), static::getStiValue()],
+                $condition
+            ];
+        }
+        return parent::deleteAll($condition, $params);
+    }
+
+    /**
+     * @inheritdoc
+     */
     public static function instantiate($row)
     {
         if (isset($row[static::getStiColumn()])) {
