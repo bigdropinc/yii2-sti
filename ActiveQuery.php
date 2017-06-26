@@ -11,9 +11,9 @@ namespace bigdropinc\sti;
 
 class ActiveQuery extends \yii\db\ActiveQuery
 {
-    private $stiColumn;
-    private $stiValue;
-    private $isStiConditionEnabled;
+    protected $stiColumn;
+    protected $stiValue;
+    protected $isStiConditionEnabled;
 
     /**
      * @inheritdoc
