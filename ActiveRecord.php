@@ -85,7 +85,7 @@ class ActiveRecord extends \yii\db\ActiveRecord
      */
     public static function deleteAll($condition = '', $params = [])
     {
-        if(static::isStiEnabled()){
+        if(static::isStiNecessary()){
             $condition = [
                 'AND',
                 ['IN', static::getStiColumn(), static::getStiValue()],
